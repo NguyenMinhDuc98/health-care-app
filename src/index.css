@@ -5,6 +5,13 @@
 @import url("./styles/index.scss");
 @import url("./styles/overideAntD.scss");
 
+@layer base {
+  button,
+  [type="submit"] {
+    background-color: #1677ff;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
