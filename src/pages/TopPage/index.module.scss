@@ -1,0 +1,16 @@
+.topPage {
+  :global {
+    .main-info {
+      display: flex;
+      flex-direction: row;
+    }
+    .filter {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 272px;
+      margin: 24px 0;
+    }
+    .meal-history {
+    }
+  }
+}
