@@ -1,3 +1,27 @@
 .ant-form-item-label {
   font-weight: bold;
 }
+
+.ant-image .ant-image-img {
+  object-fit: cover;
+}
+.ant-dropdown {
+  inset: 54.5px auto auto 1524px !important;
+}
+.ant-dropdown .ant-dropdown-menu {
+  background-color: #777777;
+  width: 280px;
+  border-radius: 0;
+}
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
+  border-radius: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 23px;
+}
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: left;
+  color: white;
+}

@@ -1,12 +1,16 @@
 import React from "react";
 import Header from "../Header";
 import Footer from "../Footer";
+import ScrollToTopBtn from "../ScrollToTopBtn";
 
 const CommonLayout = ({ children }) => {
   return (
-    <div className="h-screen">
+    <div>
       <Header />
-      {children}
+      <div className="relative">
+        {children}
+        <ScrollToTopBtn />
+      </div>
       <Footer />
     </div>
   );

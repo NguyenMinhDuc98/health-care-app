@@ -4,6 +4,7 @@ import { Row, Col, Image } from "antd";
 import { useNavigate } from "react-router";
 import { routesObj } from "../../../routes";
 import Navigator from "./Navigator";
+import Menu from "./Menu";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -34,14 +35,7 @@ const Header = () => {
         {items.map((item, index) => (
           <Navigator key={index} {...item} />
         ))}
-        <Image
-          className="ml-4"
-          width={32}
-          height={32}
-          src="/assets/icons/icon_menu.png"
-          preview={false}
-          // onClick={() => navigate(routesObj.home.path)}
-        />
+        <Menu />
       </Col>
     </Row>
   );
