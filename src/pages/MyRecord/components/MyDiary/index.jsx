@@ -1,47 +1,29 @@
 import { Spin } from "antd";
 import React from "react";
 import LoadMoreBtn from "../../../../components/LoadMoreBtn";
-import { mealType } from "../../../../constant/topPage";
 import useFetchData from "../../../../customHook/useFetchData";
-import { topPageService } from "../../../../services/topPageService";
-import Record from "../Record";
-import Item from "../Item";
-
-const filters = [
-  { link: "/assets/images/morning_filter.png", value: mealType.morning },
-  { link: "/assets/images/lunch_filter.png", value: mealType.lunch },
-  { link: "/assets/images/dinner_filter.png", value: mealType.dinner },
-  { link: "/assets/images/snack_filter.png", value: mealType.snack },
-];
+import Item from "./Item";
+import { myRecordService } from "../../../../services/myRecordService";
 
 const MyDiary = () => {
-  const { loading, data, setData, loadMore, dataRef } = useFetchData({
-    api: topPageService.getList,
+  const { loading, data, loadMore } = useFetchData({
+    api: myRecordService.getListDiary,
   });
-
-  const handleFilter = (value) => {
-    const filteredData = dataRef.current.filter(
-      (item) => item.status === value
-    );
-    setData(filteredData);
-  };
 
   return (
     <div>
-      <div className="filter">
-        {filters.map((item, index) => (
-          <Record key={index} item={item} handleFilter={handleFilter} />
-        ))}
-      </div>
       {loading ? (
         <div className="spinner">
           <Spin size="large" />
         </div>
       ) : (
-        <div className="meal-history m-auto">
-          {data.map((item, index) => (
-            <Item key={index} {...item} />
-          ))}
+        <div>
+          <div className="diary-title">MY DIARY</div>
+          <div className="diary-list w-full">
+            {data.map((item, index) => (
+              <Item key={index} {...item} />
+            ))}
+          </div>
         </div>
       )}
       <div className="w-full flex justify-center mt-7 mb-16">

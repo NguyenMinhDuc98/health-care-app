@@ -26,20 +26,14 @@ const records = [
 const MyRecord = () => {
   return (
     <div className={styles.myRecord}>
-      <div>
+      <div className="record-list">
         {records.map((item, index) => (
           <Record key={index} item={item} />
         ))}
       </div>
-      {/* <div>
-        <Graph />
-      </div>
-      <div>
-        <MyExercise />
-      </div>
-      <div>
-        <MyDiary />
-      </div> */}
+      <Graph />
+      <MyExercise />
+      <MyDiary />
     </div>
   );
 };

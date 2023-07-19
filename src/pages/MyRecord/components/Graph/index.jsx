@@ -8,6 +8,8 @@ import {
 } from "chart.js";
 import React from "react";
 import { Line } from "react-chartjs-2";
+import { Button } from "antd";
+import dayjs from "dayjs";
 
 ChartJS.register(
   CategoryScale,
@@ -96,7 +98,17 @@ export const data = {
 export default function Graph() {
   return (
     <div className="graph">
+      <div className="flex flex-row">
+        <div className="section-title">BODY RECORD</div>
+        <div className="section-date">{dayjs().format("YYYY.MM.DD")}</div>
+      </div>
       <Line options={options} data={data} />
+      <div className="flex flex-row mt-3">
+        <Button className="graph-btn">日</Button>
+        <Button className="graph-btn">週</Button>
+        <Button className="graph-btn">月</Button>
+        <Button className="graph-btn">年</Button>
+      </div>
     </div>
   );
 }

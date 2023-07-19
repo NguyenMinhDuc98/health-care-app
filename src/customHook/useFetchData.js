@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { topPageData } from "../mockData/topPage";
 
 const useFetchData = ({ api }) => {
   const [loading, setLoading] = useState(false);
@@ -11,8 +10,9 @@ const useFetchData = ({ api }) => {
     try {
       const res = await api();
 
-      setData(res);
-      dataRef.current = res;
+      const prevData = dataRef.current || [];
+      dataRef.current = [...prevData, ...res];
+      setData([...prevData, ...res]);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -21,9 +21,7 @@ const useFetchData = ({ api }) => {
   };
 
   const loadMore = () => {
-    const temp = [...dataRef.current, ...topPageData.mealHistory];
-    dataRef.current = temp;
-    setData(temp);
+    fetchData();
   };
 
   useEffect(() => {

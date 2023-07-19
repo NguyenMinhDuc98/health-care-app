@@ -3,18 +3,17 @@ import { Image } from "antd";
 
 const Record = ({ item }) => {
   return (
-    <div>
+    <div className="record">
       <Image
-        width={136}
-        height={136}
+        width={264}
+        height={264}
         src={item.image}
         preview={false}
-        // onClick={() => handleFilter(item.value)}
-        className="cursor-pointer"
+        className="grayscale pt-6 pl-6"
       />
-      <div>
-        {item.text}
-        {item.btnText}
+      <div className="record-info">
+        <div className="record-text">{item.text}</div>
+        <div className="record-btn-text">{item.btnText}</div>
       </div>
     </div>
   );

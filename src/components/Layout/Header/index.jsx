@@ -9,7 +9,11 @@ const Header = () => {
   const navigate = useNavigate();
 
   const items = [
-    { icon: "/assets/icons/icon_memo.png", text: "自分の記録" },
+    {
+      icon: "/assets/icons/icon_memo.png",
+      text: "自分の記録",
+      path: routesObj.myRecord.path,
+    },
     { icon: "/assets/icons/icon_challenge.png", text: "チャレンジ" },
     { icon: "/assets/icons/icon_info.png", text: "お知らせ" },
   ];
@@ -23,6 +27,7 @@ const Header = () => {
           src={"/assets/logo.png"}
           preview={false}
           onClick={() => navigate(routesObj.home.path)}
+          className="cursor-pointer"
         />
       </Col>
       <Col span={12} className="flex flex-row justify-between items-center">
