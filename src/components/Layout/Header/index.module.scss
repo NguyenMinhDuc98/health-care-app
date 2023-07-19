@@ -1,0 +1,21 @@
+.header {
+  background-color: #414141;
+  color: #ffffff;
+  height: 64px;
+  padding-left: 160px;
+  padding-right: 160px;
+
+  :global {
+    .logo {
+      padding-top: 16px;
+      padding-left: 16px;
+    }
+    .navigator {
+      width: 160px;
+      height: 48px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
