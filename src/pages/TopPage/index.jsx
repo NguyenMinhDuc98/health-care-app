@@ -11,7 +11,7 @@ const TopPage = () => {
         <Image
           width={540}
           height={312}
-          src={"/assets/images/main_photo.png"}
+          src={"/assets/images/d01.jpg"}
           preview={false}
         />
         <MainGraph />

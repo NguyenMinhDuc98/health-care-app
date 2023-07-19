@@ -7,17 +7,17 @@ import MyExercise from "./components/MyExercise";
 
 const records = [
   {
-    image: "/assets/images/my_record.png",
+    image: "/assets/images/MyRecommend-1.jpg",
     text: "BODY RECORD",
     btnText: "自分のカラダの記録",
   },
   {
-    image: "/assets/images/my_exercise.png",
+    image: "/assets/images/MyRecommend-2.jpg",
     text: "MY EXERCISE",
     btnText: "自分の運動の記録",
   },
   {
-    image: "/assets/images/my_diary.png",
+    image: "/assets/images/MyRecommend-3.jpg",
     text: "MY DIARY",
     btnText: "自分の日記",
   },
