@@ -1,5 +1,6 @@
 import AuthLayout from "../components/Layout/AuthLayout";
 import Login from "../pages/Login";
+import MyRecord from "../pages/MyRecord";
 import TopPage from "../pages/TopPage";
 import { utils } from "../utils";
 import ProtectedRoute from "./ProtectedRoute";
@@ -10,6 +11,14 @@ export const routesObj = {
     element: (
       <ProtectedRoute>
         <TopPage />
+      </ProtectedRoute>
+    ),
+  },
+  myRecord: {
+    path: "/my-record",
+    element: (
+      <ProtectedRoute>
+        <MyRecord />
       </ProtectedRoute>
     ),
   },
