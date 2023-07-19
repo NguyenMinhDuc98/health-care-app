@@ -7,10 +7,38 @@
     .filter {
       display: flex;
       justify-content: space-between;
-      padding: 0 272px;
+      padding: 0 550px;
       margin: 24px 0;
     }
     .meal-history {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 980px;
+    }
+    .item {
+      width: 234px;
+      height: 234px;
+      position: relative;
+      margin-bottom: 8px;
+      margin-right: 8px;
+    }
+    .item-info {
+      background-color: #ffcc21;
+      color: white;
+      height: 32px;
+      position: absolute;
+      z-index: 1000;
+      bottom: 0;
+      left: 0;
+      padding: 5px 10px 7px 8px;
+      font-size: 15px;
+    }
+    .graph {
+      background-color: #2e2e2e;
+      height: 312px;
+      width: 70vw;
+      padding: 0 53px;
     }
   }
 }

@@ -4,7 +4,7 @@ import Footer from "../Footer";
 
 const CommonLayout = ({ children }) => {
   return (
-    <div className="h-screen relative">
+    <div className="h-screen">
       <Header />
       {children}
       <Footer />
