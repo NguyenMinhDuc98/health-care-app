@@ -17,6 +17,10 @@
       flex-direction: row;
       align-items: center;
       cursor: pointer;
+
+      &-selected {
+        color: #FF963C;
+      }
     }
   }
 }
