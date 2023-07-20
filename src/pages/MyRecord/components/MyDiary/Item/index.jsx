@@ -2,11 +2,6 @@ import dayjs from "dayjs";
 import React from "react";
 
 const Item = ({ description, date }) => {
-  console.log(
-    "🚀 ~ file: index.jsx:5 ~ Item ~ description, date:",
-    description,
-    date
-  );
   return (
     <div className="diary">
       <div className="diary-date-time">

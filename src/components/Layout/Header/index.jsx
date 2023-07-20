@@ -1,10 +1,10 @@
+import { Col, Image, Row } from "antd";
 import React from "react";
-import styles from "./index.module.scss";
-import { Row, Col, Image } from "antd";
 import { useNavigate } from "react-router";
 import { routesObj } from "../../../routes";
-import Navigator from "./Navigator";
 import Menu from "./Menu";
+import Navigator from "./Navigator";
+import styles from "./index.module.scss";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -15,8 +15,8 @@ const Header = () => {
       text: "自分の記録",
       path: routesObj.myRecord.path,
     },
-    { icon: "/assets/icons/icon_challenge.png", text: "チャレンジ" },
-    { icon: "/assets/icons/icon_info.png", text: "お知らせ" },
+    { icon: "/assets/icons/icon_challenge.png", text: "チャレンジ", path: "" },
+    { icon: "/assets/icons/icon_info.png", text: "お知らせ", path: "" },
   ];
 
   return (
